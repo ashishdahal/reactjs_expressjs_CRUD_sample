@@ -19,6 +19,7 @@ function Card({yname,age,title,date,task}) {
 
       </div>
       <div className="lower-container">
+
         <h1 id='name'>{yname}</h1>
         <h2 id="age">{age}</h2>
         <h3 id='title'>{title}</h3>

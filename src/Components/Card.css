@@ -1,9 +1,6 @@
-root{
-  background:red;
-}
 
 .Card{
-  margin-top: -15%;
+  margin-top: -10%;
   text-align: center;
   width:400px;
   height:550px;
@@ -65,10 +62,12 @@ img{
 
 button{
 
+  width:200px;
   margin-bottom: -35%;
   margin-right: -22%;
-  padding:3%;
+  padding:4%;
   border: 2px solid purple;
+  border-radius: 5px;
 }
 
 button:hover{
