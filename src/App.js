@@ -16,11 +16,11 @@ return (
       
       <div className = "inputContainer">
       <h1>Enter the values you need to update.</h1>
-      <input className = "name" placeholder="Enter your name:" onChange={e => setYname(e.target.value)} ></input>
-      <input className = "age" placeholder="Enter your age:" onChange={e => setAge(e.target.value)}></input>
-      <input className = "title" placeholder="Enter Task Title:" onChange={e => setTitle(e.target.value)}></input>
-      <input className = "date" placeholder="Enter due date of task:" onChange={e => setDate(e.target.value)}></input>
-      <input className = "task" placeholder="Describe your task" onChange={e => setTask(e.target.value)}></input>
+      <input className = "name" placeholder="Enter your name:" onChange={e => setYname("Name :"+e.target.value)} ></input>
+      <input className = "age" placeholder="Enter your age:" onChange={e => setAge("Age: "+e.target.value)}></input>
+      <input className = "title" placeholder="Enter Task Title:" onChange={e => setTitle("Title: "+e.target.value)}></input>
+      <input className = "date" placeholder="Enter due date of task:" onChange={e => setDate("Due date: "+e.target.value)}></input>
+      <input className = "task" placeholder="Describe your task" onChange={e => setTask("Task Description: "+e.target.value)}></input>
 
     </div>
       <Card yname={yname} age={age} title={title} date={date} task={task} />
