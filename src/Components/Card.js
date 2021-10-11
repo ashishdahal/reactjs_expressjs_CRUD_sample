@@ -3,6 +3,8 @@ import "./Card.css"
 
 function Card({yname,age,title,date,task}) {
     return (
+
+    
     
     <div className='Card'>
       <div className = 'upper-container'>
