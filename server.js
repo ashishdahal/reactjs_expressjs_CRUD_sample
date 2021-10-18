@@ -14,7 +14,7 @@ app.use("/login",(req,res)=>{
 
 app.use("/datastore",(req,res)=>{
   res.send({
-    yname:'ashish',
+    yname:'heroranger',
     age:'23',
     title:'Apple',
     date:'236784872364',

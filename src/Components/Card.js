@@ -1,11 +1,10 @@
-import React, { useState } from 'react'
+//import React, { useState } from 'react'
 import "./Card.css"
 
-function Card({yname,age,title,date,task}) {
-    return (
 
-    
-    
+function Card({yname,age,title,date,task}) {
+return (
+
     <div className='Card'>
       <div className = 'upper-container'>
         <div className = 'image-container'>

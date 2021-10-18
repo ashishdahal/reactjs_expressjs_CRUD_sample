@@ -3,26 +3,26 @@ import './App.css';
 import Card from './Components/Card'
 import React, { useState } from 'react'
 
+let data;
+
+const url = "http://localhost:8080/datastore";
+  async function getData(){
+  const response = await fetch(url);
+  data = await response.json();
+  //console.log(JSON.stringify(data));
+  //let reqData = JSON.stringify(data);
+  //console.log(JSON.stringify(data.yname));
+  }
+getData();
 
 
 function App2() {
 
-const url = "http://localhost:8080/datastore";
-async function getData(){
-  const response = await fetch(url);
-  const data = await response.json();
-  console.log(data);
-}
-
-getData();
-
-
-
-  const [yname,setYname]=useState("Displays Your Name");
-    const [age,setAge] = useState("Displays Your Age");
-    const [title,setTitle] = useState("Displays title of The task");
-    const [date,setDate] = useState("Displays When it needs to be finished");
-    const [task,setTask] = useState("Displays description of the task");
+    const [yname,setYname]=useState("Displays your name : "+data.yname);
+    const [age,setAge] = useState("Displays Your Age : "+data.age);
+    const [title,setTitle] = useState("Displays title of The task : " +data.title);
+    const [date,setDate] = useState("Displays When it needs to be finished : "+data.date);
+    const [task,setTask] = useState("Displays description of the task : "+data.task);
 
 function EnterData(){
     
@@ -35,9 +35,9 @@ function EnterData(){
       <input className = "title" placeholder="Enter Task Title:" onChange={e => setTitle("Title: "+e.target.value)}></input>
       <input className = "date" placeholder="Enter due date of task:" onChange={e => setDate("Due date: "+e.target.value)}></input>
       <input className = "task" placeholder="Describe your task" onChange={e => setTask("Task Description: "+e.target.value)}></input>
-      <button >button</button>
+      <button >ADD_TO_BACKEND</button>
       </div>
-      <Card yname={yname} age={age} title={title} date={date} task={task}/>
+      <Card yname={yname} date={date} age={age} title={title} task={task}/>
     </div>);
   }
 

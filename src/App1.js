@@ -19,7 +19,6 @@ if(!token){
 
   <div className = "LoginContainer">
   <App2/>
-  
   </div>
   
    
